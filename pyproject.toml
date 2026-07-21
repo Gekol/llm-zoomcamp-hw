@@ -9,8 +9,19 @@ dependencies = [
     "jupyter>=1.1.1",
     "minsearch>=0.0.8",
     "openai>=2.43.0",
+    "psycopg[binary]>=3.3.4",
     "python-dotenv>=1.2.1",
     "requests>=2.32.5",
+    "sentence-transformers>=5.6.0",
     "sqlitesearch>=0.3.0",
+    "torch>=2.0",
     "toyaikit>=0.0.11",
 ]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
